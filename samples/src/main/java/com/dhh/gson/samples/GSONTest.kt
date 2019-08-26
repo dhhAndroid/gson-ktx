@@ -1,6 +1,7 @@
 package com.dhh.gson.samples
 
 import com.dhh.gson.ktx.GSON
+import com.dhh.gson.ktx.toBean
 import com.dhh.gson.ktx.toJson
 
 /**
@@ -9,6 +10,7 @@ import com.dhh.gson.ktx.toJson
  * @author dhh
  */
 class GSONTest {
+    data class Student(var name: String, var age: Int)
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
@@ -20,6 +22,7 @@ class GSONTest {
 
 
             val xiaoMing = GSON.fromJson<Student>(xiaoMingJson)
+            val student = xiaoMingJson.toBean<Student>()
             println(xiaoMing)
             val xiaoLi = GSON.fromJson<Student>(xiaoLiJson)
             println(xiaoLi)
@@ -36,8 +39,4 @@ class GSONTest {
 
         }
     }
-
-    data class Student(var name: String, var age: Int)
-
-
 }

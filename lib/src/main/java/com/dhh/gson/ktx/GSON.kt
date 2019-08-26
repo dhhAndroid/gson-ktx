@@ -8,8 +8,7 @@ object GSON {
     /**
      * 初始化默认的 [com.google.gson.Gson] 转换器
      */
-    var gson = GsonBuilder().setLenient()
-        .create()
+    var gson = GsonBuilder().setLenient().create()
 
     inline fun <reified T> fromJson(json: String): T {
         val type = object : TypeToken<T>() {}.type
