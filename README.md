@@ -3,7 +3,24 @@
 ### A set of Kotlin extensions for Gson.
 ### 一套 Gson 的 Kotlin 扩展库
 
-## 使用方法如下( [Sample](/samples/src/main/java/com/dhh/gson/samples) )
+### version: [ ![Download](https://api.bintray.com/packages/dhhandroid/maven/gson-ktx/images/download.svg) ](https://bintray.com/dhhandroid/maven/gson-ktx/_latestVersion)
+
+### gradle:
+```groovy
+implementation 'com.dhh:gson-ktx:version'
+```
+
+### maven:
+```xml
+<dependency>
+  <groupId>com.dhh</groupId>
+  <artifactId>gson-ktx</artifactId>
+  <version>version</version>
+  <type>pom</type>
+</dependency>
+```
+
+## 使用方法如下( [Sample](/samples/src/main/java/com/dhh/gson/samples/GSONTest.kt) )
 ### 通过 GSON 类访问相关方法： 
 ```kotlin
 class GSONTest {
