@@ -7,6 +7,7 @@ buildscript {
     }
     dependencies {
         classpath(kotlin("gradle-plugin", kotlin_version))
+        classpath("com.novoda:bintray-release:0.9.1")
     }
 }
 allprojects {
