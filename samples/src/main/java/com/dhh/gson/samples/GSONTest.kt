@@ -14,11 +14,11 @@ class GSONTest {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val xiaoMingJson = """{name:"XiaoMing",age:22}"""
-            val xiaoLiJson = """{name:"XiaoLi",age:20}"""
+            val xiaoMingJson = """{"name":"XiaoMing","age":22}"""
+            val xiaoLiJson = """{"name":"XiaoLi","age":20}"""
             val classJson = """[$xiaoLiJson,$xiaoMingJson]"""
-            val studentMapJson = """{xiaoMing:$xiaoMingJson,xiaoLi:$xiaoLiJson}"""
-            val classMapJson = """{class1:$classJson,class2:$classJson}"""
+            val studentMapJson = """{"xiaoMing":$xiaoMingJson,"xiaoLi":$xiaoLiJson}"""
+            val classMapJson = """{"class1":$classJson,"class2":$classJson}"""
 
 
             val xiaoMing = GSON.fromJson<Student>(xiaoMingJson)

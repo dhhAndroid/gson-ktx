@@ -17,7 +17,7 @@ object GSON {
 
     inline fun <reified T> fromJson(jsonElement: JsonElement): T {
         val type = object : TypeToken<T>() {}.type
-        return gson.fromJson(jsonElement.toString(), type)
+        return gson.fromJson(jsonElement, type)
     }
 
     fun toJson(any: Any) = gson.toJson(any)

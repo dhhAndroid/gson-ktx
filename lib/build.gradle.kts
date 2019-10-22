@@ -21,7 +21,7 @@ publish {
     userOrg = "dhhandroid"
     groupId = "com.dhh"
     artifactId = "gson-ktx"
-    publishVersion = "1.0.2"
+    publishVersion = "1.0.3"
     desc = "A set of Kotlin extensions for Gson"
     website = "https://github.com/dhhAndroid/gson-ktx"
     bintrayUser = loadProperties.getProperty("bintray.user")

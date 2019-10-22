@@ -30,11 +30,11 @@ class GSONTest {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            val xiaoMingJson = """{name:"XiaoMing",age:22}"""
-            val xiaoLiJson = """{name:"XiaoLi",age:20}"""
-            val classJson = """[$xiaoLiJson,$xiaoMingJson]"""
-            val studentMapJson = """{xiaoMing:$xiaoMingJson,xiaoLi:$xiaoLiJson}"""
-            val classMapJson = """{class1:$classJson,class2:$classJson}"""
+              val xiaoMingJson = """{"name":"XiaoMing","age":22}"""
+              val xiaoLiJson = """{"name":"XiaoLi","age":20}"""
+              val classJson = """[$xiaoLiJson,$xiaoMingJson]"""
+              val studentMapJson = """{"xiaoMing":$xiaoMingJson,"xiaoLi":$xiaoLiJson}"""
+              val classMapJson = """{"class1":$classJson,"class2":$classJson}"""
 
 
             val xiaoMing: Student = GSON.fromJson<Student>(xiaoMingJson)
@@ -105,7 +105,7 @@ object GSON {
 
     inline fun <reified T> fromJson(jsonElement: JsonElement): T {
         val type = object : TypeToken<T>() {}.type
-        return gson.fromJson(jsonElement.toString(), type)
+        return gson.fromJson(jsonElement, type)
     }
 
     fun toJson(any: Any) = gson.toJson(any)
